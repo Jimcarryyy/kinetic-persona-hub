@@ -1,21 +1,22 @@
 
+import { ExternalLink, Eye, Zap } from 'lucide-react';
 import { useState } from 'react';
-import { ExternalLink, Eye, Code, Zap } from 'lucide-react';
-import PixelDev from '../image/pixeldev.png';
 import AroundTheWorld from '../image/aroundtheworld.png';
-import Spt from '../image/spt.png';
+import CarNation from '../image/carnation.png';
+import Carrental from '../image/carrental.png';
 import Cohen from '../image/cohen.png';
 import Gkggc from '../image/gkggc.png';
-import Carrental from '../image/carrental.png';
+import GYM from '../image/gym.png';
+import Hotel from '../image/hotel.png';
 import Line from '../image/line.png';
-import Orderuk from '../image/orderuk.png';
-import Rights from '../image/rights.png';
 import LogSystem from '../image/logsystemimage.jpg';
 import Movie from '../image/movie.png';
-import Hotel from '../image/hotel.png';
+import Orderuk from '../image/orderuk.png';
 import Patient from '../image/patient.png';
-import GYM from '../image/gym.png';
-import CarNation from '../image/carnation.png';
+import PixelDev from '../image/pixeldev.png';
+import Rights from '../image/rights.png';
+import Spt from '../image/spt.png';
+import Veritas from '../image/veritas.png';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -203,7 +204,19 @@ const Projects = () => {
       category: 'desktop',
       featured: false,
     },
-    
+    {
+      id: 17,
+      title: 'Veritas Legal',
+      description: 'Premier legal representation combining decades of experience with innovative approaches',
+      longDescription:
+        'Premier legal representation combining decades of experience with innovative approaches to achieve exceptional outcomes for our clients.',
+      image: Veritas,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://veritas-visual-justice.vercel.app/',
+      featured: true,
+    },
+
   ];
 
   const filters = [
