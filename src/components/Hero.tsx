@@ -5,7 +5,7 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const texts = ['Full Stack Developer', 'UI/UX Designer', 'Problem Solver', 'Creative Thinker'];
+  const texts = ['Full Stack Developer', 'Software Developer', 'Problem Solver', 'Creative Thinker'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
             <span className="block text-shadow">Hello, I'm</span>
-            <span className="block gradient-text mt-2">Alex Johnson</span>
+            <span className="block gradient-text mt-2 leading-snug">Jimcarry Omambak</span>
           </h1>
           
           <div className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8 h-12 flex items-center justify-center">
@@ -87,9 +87,9 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
+              { icon: Github, href: 'https://github.com/Jimcarryyy', label: 'GitHub' },
               { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:alex@example.com', label: 'Email' },
+              { icon: Mail, href: 'mailto:jimcarryomambak0@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}

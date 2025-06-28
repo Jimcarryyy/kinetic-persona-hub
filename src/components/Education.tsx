@@ -1,38 +1,77 @@
 
-import { GraduationCap, Award, Book, Calendar } from 'lucide-react';
+import { CodeXml, GraduationCap, Award, Book, Calendar } from 'lucide-react';
 
 const Education = () => {
   const educationData = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'Stanford University',
-      year: '2019-2021',
-      description: 'Specialized in Machine Learning and Web Technologies',
-      achievements: ['Magna Cum Laude', 'Research Assistant', 'Dean\'s List'],
+      degree: 'Primary Education',
+      institution: 'Subabasbas Elementary School',
+      year: '2008-2015',
+      description:
+        'Subabasbas Elementary School fostered my early academic growth by instilling core values, foundational skills, and a love for learning in a supportive public school environment.',
+      achievements: [],
       icon: GraduationCap,
     },
     {
-      degree: 'Bachelor of Software Engineering',
-      institution: 'MIT',
+      degree: 'Secondary Education',
+      institution: 'Marigondon National High School',
       year: '2015-2019',
-      description: 'Foundation in Computer Science and Software Development',
-      achievements: ['Summa Cum Laude', 'CS Society President', 'Hackathon Winner'],
-      icon: Book,
+      description:
+        'Marigondon National High School provided a strong academic and character foundation, encouraging critical thinking, community involvement, and personal responsibility through diverse public education programs.',
+      achievements: [],
+      icon: GraduationCap,
+    },
+    {
+      degree: 'Upper Secondary Education',
+      institution: 'Benthel Asia School of Technology',
+      year: '2019-2021',
+      description:
+        'Benthel Asia School of Technology commits itself to provide an environment where absorbent young people learn how to develop systems thinking and technological fluency, preparing students for higher education and innovation-driven careers.',
+      achievements: ['with high honors'],
+      icon: GraduationCap,
+    },
+    {
+      degree: 'Pixel Dev Code',
+      institution: 'Wordpress Developer',
+      year: '2021-2023',
+      description:
+        'Worked as a WordPress developer in a small web development agency, building client websites daily using both custom-coded themes and popular builders like Elementor and Divi. Adapted to diverse project requirements, integrating plugins such as WooCommerce to deliver tailored, functional, and visually appealing websites.',
+      achievements: ['Trusted developer'],
+      icon: CodeXml,
+    },
+    {
+      degree: 'Independent Contractor',
+      institution: 'Fullstack Developer',
+      year: '2023-2024',
+      description:
+        'Developed a fullstack automation system that integrates LINE Open Chat with UiPath RPA to schedule and send messages. This role enhanced my expertise in backend scripting, automation workflows, and system integration, enabling seamless message dispatch through robotic process automation.',
+      achievements: ['Learned UI Path', 'Learned RPA', 'Learned Automation'],
+      icon: CodeXml,
+    },
+    {
+      degree: 'Independent Contractor',
+      institution: 'Software Engineer',
+      year: '2024-2025',
+      description:
+        'Served as a full-spectrum software engineer under NDA, independently managing the entire development lifecycle. Responsibilities included frontend and backend development, database architecture, API integrations, DevOps workflows, CI/CD pipelines, Dockerization, GitHub repository management, and server deployment. Operated as a one-man team ensuring seamless delivery and maintenance of multiple systems.',
+      achievements: ['Learned system architecture', 'Learned CI/CD pipelines', 'Managing Multiple Sites', 'One-man Army'],
+      icon: CodeXml,
     },
   ];
 
+
   const certifications = [
-    'AWS Certified Solutions Architect',
-    'Google Cloud Professional',
+    'Frontend Specialist',
+    'Java Expert',
     'React Advanced Certification',
-    'UI/UX Design Specialist',
+    'One-man Army',
   ];
 
   return (
     <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-muted/10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Education</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Education and Experience</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             My academic journey and continuous learning path
           </p>

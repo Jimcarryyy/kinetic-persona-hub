@@ -3,10 +3,10 @@ import { User, Award, Coffee, Heart } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: User, label: 'Years Experience', value: '5+' },
-    { icon: Award, label: 'Projects Completed', value: '50+' },
+    { icon: User, label: 'Years Experience', value: '3+' },
+    { icon: Award, label: 'Projects Completed', value: '20+' },
     { icon: Coffee, label: 'Cups of Coffee', value: '1000+' },
-    { icon: Heart, label: 'Happy Clients', value: '25+' },
+    { icon: Heart, label: 'Happy Clients', value: '10+' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hi there! I'm Alex, a passionate full-stack developer with over 5 years of experience 
+                  Hi there! I'm Jimcarry, a passionate full-stack developer with over 3 years of experience 
                   creating digital solutions that make a difference. My journey began with a curiosity 
                   about how things work, which led me to the fascinating world of web development.
                 </p>

@@ -1,6 +1,7 @@
 
+import emailjs from 'emailjs-com';
+import { Github, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Contact = () => {
@@ -23,39 +24,43 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success('Message sent successfully! I\'ll get back to you soon.');
+    try {
+      await emailjs.send('service_1cpo5tu', 'template_k3mgafs', formData, '9P6P2O-c6i6ofsGH9');
+      toast.success('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+      console.error(error);
+    }
+
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex@example.com',
-      href: 'mailto:alex@example.com'
+      value: 'jimcarryomambak0@gmail.com',
+      href: 'mailto:jimcarryomambak0@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+63 9301591424',
       href: 'tel:+15551234567'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Philippines, Lapu-lapu City',
       href: '#'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Jimcarryyy', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: Twitter, href: 'https://x.com/Toptierprov12', label: 'Twitter' },
   ];
 
   return (

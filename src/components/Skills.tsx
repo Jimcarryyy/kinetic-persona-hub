@@ -10,48 +10,55 @@ const Skills = () => {
       icon: Code,
       title: 'Frontend Development',
       skills: [
-        { name: 'React', level: 95, color: 'from-blue-500 to-cyan-500' },
-        { name: 'TypeScript', level: 90, color: 'from-blue-600 to-blue-400' },
-        { name: 'Next.js', level: 85, color: 'from-gray-800 to-gray-600' },
+        { name: 'HTML', level: 100, color: 'from-orange-500 to-yellow-400' },
+        { name: 'CSS', level: 90, color: 'from-blue-500 to-blue-300' },
+        { name: 'JavaScript', level: 70, color: 'from-yellow-500 to-yellow-300' },
+        { name: 'jQuery', level: 70, color: 'from-indigo-500 to-indigo-300' },
+        { name: 'React.js', level: 80, color: 'from-blue-400 to-cyan-400' },
+        { name: 'Vue.js', level: 75, color: 'from-green-500 to-emerald-400' },
         { name: 'Tailwind CSS', level: 92, color: 'from-cyan-500 to-teal-500' },
-        { name: 'Vue.js', level: 80, color: 'from-green-500 to-emerald-500' },
-        { name: 'SASS/SCSS', level: 88, color: 'from-pink-500 to-rose-500' },
+        { name: 'Bootstrap CSS', level: 92, color: 'from-cyan-500 to-teal-700' },
+        { name: 'Next.js', level: 50, color: 'from-gray-800 to-gray-600' },
+        { name: 'Nuxt.js', level: 55, color: 'from-lime-500 to-green-400' },
+        { name: 'SASS/SCSS', level: 70, color: 'from-pink-500 to-red-400' },
+        { name: 'TypeScript', level: 60, color: 'from-blue-600 to-blue-400' },
       ]
     },
     backend: {
       icon: Database,
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', level: 90, color: 'from-green-600 to-green-400' },
-        { name: 'Python', level: 88, color: 'from-yellow-500 to-amber-500' },
-        { name: 'PostgreSQL', level: 85, color: 'from-blue-700 to-blue-500' },
-        { name: 'MongoDB', level: 82, color: 'from-green-700 to-green-500' },
-        { name: 'GraphQL', level: 78, color: 'from-purple-500 to-pink-500' },
-        { name: 'Redis', level: 75, color: 'from-red-600 to-red-400' },
-      ]
-    },
-    design: {
-      icon: Palette,
-      title: 'Design & UX',
-      skills: [
-        { name: 'Figma', level: 92, color: 'from-purple-500 to-indigo-500' },
-        { name: 'Adobe XD', level: 85, color: 'from-pink-500 to-purple-500' },
-        { name: 'Prototyping', level: 88, color: 'from-orange-500 to-red-500' },
-        { name: 'User Research', level: 80, color: 'from-teal-500 to-cyan-500' },
-        { name: 'Wireframing', level: 90, color: 'from-gray-600 to-gray-400' },
-        { name: 'Design Systems', level: 87, color: 'from-indigo-500 to-blue-500' },
+        { name: 'PHP', level: 75, color: 'from-indigo-600 to-purple-400' },
+        { name: 'Java', level: 80, color: 'from-red-600 to-orange-400' },
+        { name: 'C++', level: 40, color: 'from-gray-700 to-gray-500' },
+        { name: 'Python', level: 35, color: 'from-yellow-500 to-amber-400' },
+        { name: 'Node.js', level: 60, color: 'from-green-700 to-lime-400' },
+        { name: 'MySQL', level: 90, color: 'from-teal-500 to-blue-500' },
       ]
     },
     tools: {
       icon: Cloud,
       title: 'Tools & DevOps',
       skills: [
-        { name: 'AWS', level: 85, color: 'from-orange-500 to-yellow-500' },
-        { name: 'Docker', level: 80, color: 'from-blue-600 to-blue-400' },
-        { name: 'Git', level: 95, color: 'from-orange-600 to-red-600' },
-        { name: 'CI/CD', level: 78, color: 'from-green-600 to-emerald-600' },
-        { name: 'Kubernetes', level: 72, color: 'from-blue-700 to-indigo-700' },
-        { name: 'Vercel', level: 88, color: 'from-gray-800 to-black' },
+        { name: 'WordPress/CMS', level: 75, color: 'from-blue-700 to-indigo-500' },
+        { name: 'Git', level: 70, color: 'from-orange-600 to-red-600' },
+        { name: 'GitHub', level: 80, color: 'from-gray-800 to-gray-500' },
+        { name: 'Docker', level: 60, color: 'from-blue-600 to-blue-400' },
+        { name: 'CI/CD Pipelines', level: 100, color: 'from-green-600 to-emerald-600' },
+        { name: 'CMD', level: 70, color: 'from-gray-700 to-gray-400' },
+        { name: 'SSH Configs', level: 90, color: 'from-slate-700 to-slate-400' },
+        { name: 'RPA', level: 50, color: 'from-purple-600 to-indigo-400' },
+      ]
+    },
+    design: {
+      icon: Palette,
+      title: 'Design & UX',
+      skills: [
+        { name: 'Figma', level: 82, color: 'from-purple-500 to-indigo-500' },
+        { name: 'Prototyping', level: 90, color: 'from-orange-500 to-red-500' },
+        { name: 'User Research', level: 80, color: 'from-teal-500 to-cyan-500' },
+        { name: 'Wireframing', level: 90, color: 'from-gray-600 to-gray-400' },
+        { name: 'Design Systems', level: 87, color: 'from-indigo-500 to-blue-500' },
       ]
     }
   };
@@ -127,9 +134,9 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold mb-6 text-primary">Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              'JavaScript', 'HTML5', 'CSS3', 'React', 'Vue.js', 'Angular', 'Node.js', 'Express',
-              'MongoDB', 'PostgreSQL', 'AWS', 'Docker', 'Kubernetes', 'GraphQL', 'REST APIs',
-              'Git', 'Webpack', 'Vite', 'Jest', 'Cypress', 'Figma', 'Adobe Creative Suite'
+              'HTML', 'CSS', 'JavaScript', 'jQuery', 'React.js', 'Vue.js', 'Next.js', 'Nuxt.js', 'SASS/SCSS',
+              'TypeScript', 'PHP', 'Java', 'C++', 'Python', 'Node.js', 'MySQL',
+              'WordPress/CMS', 'Git', 'GitHub', 'Docker', 'CI/CD Pipelines', 'CMD', 'SSH Configs', 'RPA','Figma'
             ].map((tech, index) => (
               <span
                 key={tech}
