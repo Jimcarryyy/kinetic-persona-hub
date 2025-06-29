@@ -1,146 +1,122 @@
-import { Award, Calendar, CodeXml, GraduationCap } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-const Education = () => {
-  const educationData = [
-    {
-      degree: 'Primary Education',
-      institution: 'Subabasbas Elementary School',
-      year: '2008-2015',
-      description:
-        'Subabasbas Elementary School fostered my early academic growth by instilling core values, foundational skills, and a love for learning in a supportive public school environment.',
-      achievements: [],
-      icon: GraduationCap,
-    },
-    {
-      degree: 'Secondary Education',
-      institution: 'Marigondon National High School',
-      year: '2015-2019',
-      description:
-        'Marigondon National High School provided a strong academic and character foundation, encouraging critical thinking, community involvement, and personal responsibility through diverse public education programs.',
-      achievements: [],
-      icon: GraduationCap,
-    },
-    {
-      degree: 'Upper Secondary Education',
-      institution: 'Benthel Asia School of Technology',
-      year: '2019-2021',
-      description:
-        'Benthel Asia School of Technology commits itself to provide an environment where absorbent young people learn how to develop systems thinking and technological fluency, preparing students for higher education and innovation-driven careers.',
-      achievements: ['With High Honors'],
-      icon: GraduationCap,
-    },
-    {
-      degree: 'Pixel Dev Code',
-      institution: 'WordPress Developer',
-      year: '2021-2023',
-      description:
-        'Worked as a WordPress developer in a small web development agency, building client websites daily using both custom-coded themes and popular builders like Elementor and Divi.',
-      achievements: ['Trusted Developer'],
-      icon: CodeXml,
-    },
-    {
-      degree: 'Independent Contractor',
-      institution: 'Fullstack Developer',
-      year: '2023-2024',
-      description:
-        'Developed a fullstack automation system integrating LINE Open Chat with UiPath RPA for scheduled messaging. Gained experience in backend scripting, automation, and system integration.',
-      achievements: ['Learned UiPath', 'RPA', 'Automation'],
-      icon: CodeXml,
-    },
-    {
-      degree: 'Independent Contractor',
-      institution: 'Software Engineer',
-      year: '2024-2025',
-      description:
-        'Served as a full-spectrum software engineer under NDA, handling frontend/backend, DevOps, CI/CD, Docker, and production deployment independently.',
-      achievements: ['System Architecture', 'CI/CD Pipelines', 'Managing Multiple Sites', 'One-Man Army'],
-      icon: CodeXml,
-    },
-  ];
+const Hero = () => {
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const texts = ['Full Stack Developer', 'Software Developer', 'Problem Solver', 'Creative Thinker'];
 
-  const certifications = [
-    'Frontend Specialist',
-    'Java Expert',
-    'React Advanced Certification',
-    'One-Man Army',
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const text = texts[currentIndex];
+    let index = 0;
+    setCurrentText('');
+
+    const typing = setInterval(() => {
+      setCurrentText(text.slice(0, index));
+      index++;
+      if (index > text.length) {
+        clearInterval(typing);
+      }
+    }, 100);
+
+    return () => clearInterval(typing);
+  }, [currentIndex]);
+
+  const scrollToAbout = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-muted/10">
-      <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">Education and Experience</h2>
-          <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            My academic journey and continuous learning path
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8"
+    >
+      {/* Animated background gradients */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-10 left-10 w-48 h-48 sm:w-72 sm:h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-float" />
+        <div className="absolute top-32 right-10 w-48 h-48 sm:w-72 sm:h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-10 left-20 w-48 h-48 sm:w-72 sm:h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }} />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-5xl mx-auto py-20">
+        <div className="animate-fade-in-up">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
+            <span className="block text-shadow">Hello, I'm</span>
+            <span className="block gradient-text mt-2 leading-snug">Jim Carry</span>
+          </h1>
+
+          <div className="text-sm sm:text-xl lg:text-2xl text-muted-foreground mb-6 h-10 flex items-center justify-center px-2 max-w-full whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="border-r-2 border-primary pr-2 animate-pulse">
+              {currentText}
+            </span>
+          </div>
+
+          <p className="text-sm sm:text-lg text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
+            Passionate about creating exceptional digital experiences through innovative design
+            and cutting-edge technology. Let's build something amazing together.
           </p>
-        </div>
 
-        {/* Timeline */}
-        <div className="relative mb-16">
-          {/* Timeline line */}
-          <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-primary/30 rounded-full" />
-
-          {educationData.map((item, index) => (
-            <div
-              key={index}
-              className={`relative flex flex-col sm:flex-row ${
-                index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
-              } items-center sm:items-start gap-6 mb-12`}
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button
+              onClick={scrollToAbout}
+              className="magnetic-button glass-card px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-lg font-semibold text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
             >
-              <div className={`w-full sm:w-1/2 px-2 sm:px-4 ${index % 2 === 0 ? 'sm:pr-8 text-right sm:text-right' : 'sm:pl-8 sm:text-left text-left'}`}>
-                <div className="glass-card p-4 sm:p-6 rounded-xl animate-fade-in-up group hover:scale-[1.02] transition-transform duration-300">
-                  <div className="flex items-center justify-between mb-4 flex-wrap">
-                    <div className={`flex items-center space-x-2 ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse sm:flex-row sm:space-x-2' : ''}`}>
-                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                      <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
-                        <Calendar className="w-4 h-4" />
-                        <span>{item.year}</span>
-                      </div>
-                    </div>
-                  </div>
+              Explore My Work
+              <ArrowDown className="inline ml-2 group-hover:translate-y-1 transition-transform duration-300" size={18} />
+            </button>
 
-                  <h3 className="text-base sm:text-xl font-semibold mb-1 text-primary">{item.degree}</h3>
-                  <h4 className="text-sm sm:text-lg font-medium mb-3">{item.institution}</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">{item.description}</p>
+            <a
+              href="#contact"
+              className="magnetic-button px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Get In Touch
+            </a>
+          </div>
 
-                  <div className="space-y-1">
-                    {item.achievements.map((achievement, i) => (
-                      <div key={i} className="flex items-center space-x-2">
-                        <Award className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-xs sm:text-sm text-muted-foreground">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Dot for timeline (visible only on sm+) */}
-              <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10" />
-
-              <div className="hidden sm:block w-1/2" />
-            </div>
-          ))}
-        </div>
-
-        {/* Certifications */}
-        <div className="glass-card p-6 sm:p-8 rounded-2xl animate-fade-in-up">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center gradient-text">Certifications & Achievements</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="neomorphism p-3 sm:p-4 rounded-lg text-center group hover:shadow-lg transition-all duration-300"
+          {/* Social Links */}
+          <div className="flex justify-center space-x-4 sm:space-x-6">
+            {[
+              { icon: Github, href: 'https://github.com/Jimcarryyy', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:jimcarryomambak0@gmail.com', label: 'Email' },
+            ].map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="glass-card p-3 rounded-full hover:scale-110 transition-all duration-300 group"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
               >
-                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
-                <p className="text-xs sm:text-sm font-medium text-muted-foreground">{cert}</p>
-              </div>
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+              </a>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-4 h-8 sm:w-6 sm:h-10 border-2 border-muted-foreground rounded-full flex justify-center">
+          <div className="w-1 h-2 sm:h-3 bg-muted-foreground rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
   );
 };
 
-export default Education;
+export default Hero;
