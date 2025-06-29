@@ -17,6 +17,7 @@ import Patient from '../image/patient.png';
 import PixelDev from '../image/pixeldev.png';
 import Rights from '../image/rights.png';
 import Spt from '../image/spt.png';
+import Thrive from '../image/thrive.png';
 import Veritas from '../image/veritas.png';
 
 const Projects = () => {
@@ -227,6 +228,18 @@ const Projects = () => {
       technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
       category: 'frontend',
       live: 'https://neuroflow-genesis-page.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 19,
+      title: 'Trive online store',
+      description: 'We are passionate about providing exceptional products and outstanding customer service.',
+      longDescription:
+        'Founded in 2020, ThriveStore began as a small team with a big vision: to create the most customer-centric e-commerce experience possible. We started by carefully curating products that we ourselves would love to own and use.',
+      image: Thrive,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://thrive-online-store.vercel.app/',
       featured: true,
     },
 
