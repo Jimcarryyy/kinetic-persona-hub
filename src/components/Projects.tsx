@@ -8,18 +8,18 @@ import Cohen from '../image/cohen.webp';
 import Elevate from '../image/elevate.webp';
 import Gkggc from '../image/gkggc.webp';
 import GYM from '../image/gym.webp';
-import Hotel from '../image/hotel.png';
-import Line from '../image/line.png';
-import LogSystem from '../image/logsystemimage.jpg';
-import Movie from '../image/movie.png';
-import Neuro from '../image/neuro.png';
-import Orderuk from '../image/orderuk.png';
+import Hotel from '../image/hotel.webp';
+import Line from '../image/line.webp';
+import LogSystem from '../image/logsystemimage.webp';
+import Movie from '../image/movie.webp';
+import Neuro from '../image/neuro.webp';
+import Orderuk from '../image/orderuk.webp';
 import Patient from '../image/patient.webp';
-import PixelDev from '../image/pixeldev.png';
+import PixelDev from '../image/pixeldev.webp';
 import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
-import Veritas from '../image/veritas.png';
+import Veritas from '../image/veritas.webp';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
