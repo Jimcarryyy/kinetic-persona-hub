@@ -1,4 +1,3 @@
-
 import emailjs from 'emailjs-com';
 import { Github, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
 import { useState } from 'react';
@@ -47,7 +46,7 @@ const Contact = () => {
       icon: Phone,
       label: 'Phone',
       value: '+63 9301591424',
-      href: 'tel:+15551234567'
+      href: 'tel:+639301591424'
     },
     {
       icon: MapPin,
@@ -66,19 +65,19 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-primary/5">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Get In Touch</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your next project? Let's create something amazing together
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
+          <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Ready to start your next project? Let's create something amazing together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Contact Information */}
           <div className="animate-slide-in-left">
-            <div className="glass-card p-8 rounded-2xl mb-8">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Let's Connect</h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+            <div className="glass-card p-6 sm:p-8 rounded-2xl mb-8">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-primary">Let's Connect</h3>
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
                 I'm always excited to discuss new opportunities, creative projects, or just have 
                 a friendly chat about technology and design. Don't hesitate to reach out!
               </p>
@@ -90,12 +89,12 @@ const Contact = () => {
                     href={href}
                     className="flex items-center space-x-4 group hover:text-primary transition-colors duration-200"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-200">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-200">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{label}</p>
-                      <p className="font-medium">{value}</p>
+                    <div className="text-left">
+                      <p className="text-xs sm:text-sm text-muted-foreground">{label}</p>
+                      <p className="text-sm sm:text-base font-medium">{value}</p>
                     </div>
                   </a>
                 ))}
@@ -103,19 +102,19 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="glass-card p-6 rounded-xl">
-              <h4 className="text-lg font-semibold mb-4 text-primary">Follow Me</h4>
-              <div className="flex space-x-4">
+            <div className="glass-card p-4 sm:p-6 rounded-xl">
+              <h4 className="text-sm sm:text-lg font-semibold mb-4 text-primary">Follow Me</h4>
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {socialLinks.map(({ icon: Icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 glass-card rounded-full hover:scale-110 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
+                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full hover:scale-110 hover:bg-primary hover:text-primary-foreground transition-all duration-200 group"
                     aria-label={label}
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 ))}
               </div>
@@ -124,12 +123,10 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-in-right">
-            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-2xl space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="glass-card p-6 sm:p-8 rounded-2xl space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-primary">
-                    Name *
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-primary">Name *</label>
                   <input
                     type="text"
                     id="name"
@@ -137,14 +134,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                     placeholder="Your Name"
+                    className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-primary">
-                    Email *
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-primary">Email *</label>
                   <input
                     type="email"
                     id="email"
@@ -152,16 +147,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                     placeholder="your@email.com"
+                    className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2 text-primary">
-                  Subject *
-                </label>
+                <label htmlFor="subject" className="block text-sm font-medium mb-1 text-primary">Subject *</label>
                 <input
                   type="text"
                   id="subject"
@@ -169,15 +162,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                   placeholder="Project Discussion"
+                  className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2 text-primary">
-                  Message *
-                </label>
+                <label htmlFor="message" className="block text-sm font-medium mb-1 text-primary">Message *</label>
                 <textarea
                   id="message"
                   name="message"
@@ -185,15 +176,15 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
                   placeholder="Tell me about your project or just say hello..."
+                  className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background/50 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed magnetic-button group"
+                className="w-full flex items-center justify-center space-x-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed magnetic-button group"
               >
                 {isSubmitting ? (
                   <>
