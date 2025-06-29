@@ -5,6 +5,7 @@ import AroundTheWorld from '../image/aroundtheworld.png';
 import CarNation from '../image/carnation.png';
 import Carrental from '../image/carrental.png';
 import Cohen from '../image/cohen.png';
+import Elevate from '../image/elevate.png';
 import Gkggc from '../image/gkggc.png';
 import GYM from '../image/gym.png';
 import Hotel from '../image/hotel.png';
@@ -242,7 +243,19 @@ const Projects = () => {
       live: 'https://thrive-online-store.vercel.app/',
       featured: true,
     },
-
+    {
+      id: 19,
+      title: 'Elevate',
+      description: 'Join thousands of learners and creators on Elevate. Master new skills, build your expertise.',
+      longDescription:
+        'Join thousands of learners and creators on Elevate. Master new skills, build your expertise, and transform your career with our premium courses.',
+      image: Elevate,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://elevate-learn-brightly.vercel.app/',
+      featured: true,
+    },
+    
   ];
 
   const filters = [
