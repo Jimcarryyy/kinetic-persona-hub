@@ -13,6 +13,7 @@ import Line from '../image/line.webp';
 import LogSystem from '../image/logsystemimage.webp';
 import Movie from '../image/movie.webp';
 import Neuro from '../image/neuro.webp';
+import NeuroVerse from '../image/NeuroVerse.webp';
 import Orderuk from '../image/orderuk.webp';
 import Patient from '../image/patient.webp';
 import PixelDev from '../image/pixeldev.webp';
@@ -253,6 +254,18 @@ const Projects = () => {
       technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
       category: 'frontend',
       live: 'https://elevate-learn-brightly.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 21,
+      title: 'Neuro Verse',
+      description: 'Where AI ethics meets speculative fiction. Explore the intersection of technology',
+      longDescription:
+        'Where AI ethics meets speculative fiction. Explore the intersection of technology, philosophy, and human potential through the lens of tomorrows visionaries.',
+      image: NeuroVerse,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://neuro-verse-chronicles.vercel.app/',
       featured: true,
     },
     
