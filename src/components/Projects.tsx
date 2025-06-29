@@ -216,6 +216,18 @@ const Projects = () => {
       live: 'https://veritas-visual-justice.vercel.app/',
       featured: true,
     },
+    {
+      id: 18,
+      title: 'NeuroFlow AI',
+      description: 'Transform your productivity with AI-powered automation, intelligent scheduling.',
+      longDescription:
+        'Transform your productivity with AI-powered automation, intelligent scheduling, and seamless workflow optimization for modern teams.',
+      image: Veritas,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://neuroflow-genesis-page.vercel.app/',
+      featured: true,
+    },
 
   ];
 
