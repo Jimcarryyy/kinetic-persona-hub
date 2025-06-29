@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');
@@ -48,7 +48,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
             <span className="block text-shadow">Hello, I'm</span>
-            <span className="block gradient-text mt-2 leading-snug">Jimcarry</span>
+            <span className="block gradient-text mt-2 leading-snug">Jim Carry</span>
           </h1>
           
           <div className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-8 h-12 flex items-center justify-center">
