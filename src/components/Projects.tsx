@@ -11,6 +11,7 @@ import Hotel from '../image/hotel.png';
 import Line from '../image/line.png';
 import LogSystem from '../image/logsystemimage.jpg';
 import Movie from '../image/movie.png';
+import Neuro from '../image/neuro.png';
 import Orderuk from '../image/orderuk.png';
 import Patient from '../image/patient.png';
 import PixelDev from '../image/pixeldev.png';
@@ -222,7 +223,7 @@ const Projects = () => {
       description: 'Transform your productivity with AI-powered automation, intelligent scheduling.',
       longDescription:
         'Transform your productivity with AI-powered automation, intelligent scheduling, and seamless workflow optimization for modern teams.',
-      image: Veritas,
+      image: Neuro,
       technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
       category: 'frontend',
       live: 'https://neuroflow-genesis-page.vercel.app/',
