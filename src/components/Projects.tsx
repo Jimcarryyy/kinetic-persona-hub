@@ -1,24 +1,24 @@
 
 import { ExternalLink, Eye, Zap } from 'lucide-react';
 import { useState } from 'react';
-import AroundTheWorld from '../image/aroundtheworld.png';
-import CarNation from '../image/carnation.png';
-import Carrental from '../image/carrental.png';
-import Cohen from '../image/cohen.png';
-import Elevate from '../image/elevate.png';
-import Gkggc from '../image/gkggc.png';
-import GYM from '../image/gym.png';
+import AroundTheWorld from '../image/aroundtheworld.webp';
+import CarNation from '../image/carnation.webp';
+import Carrental from '../image/carrental.webp';
+import Cohen from '../image/cohen.webp';
+import Elevate from '../image/elevate.webp';
+import Gkggc from '../image/gkggc.webp';
+import GYM from '../image/gym.webp';
 import Hotel from '../image/hotel.png';
 import Line from '../image/line.png';
 import LogSystem from '../image/logsystemimage.jpg';
 import Movie from '../image/movie.png';
 import Neuro from '../image/neuro.png';
 import Orderuk from '../image/orderuk.png';
-import Patient from '../image/patient.png';
+import Patient from '../image/patient.webp';
 import PixelDev from '../image/pixeldev.png';
-import Rights from '../image/rights.png';
-import Spt from '../image/spt.png';
-import Thrive from '../image/thrive.png';
+import Rights from '../image/rights.webp';
+import Spt from '../image/spt.webp';
+import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.png';
 
 const Projects = () => {
