@@ -11,6 +11,7 @@ import GYM from '../image/gym.webp';
 import Hotel from '../image/hotel.webp';
 import Line from '../image/line.webp';
 import LogSystem from '../image/logsystemimage.webp';
+import MoodMuse from '../image/MoodMuse.webp';
 import Movie from '../image/movie.webp';
 import Neuro from '../image/neuro.webp';
 import NeuroVerse from '../image/NeuroVerse.webp';
@@ -268,7 +269,18 @@ const Projects = () => {
       live: 'https://neuro-verse-chronicles.vercel.app/',
       featured: true,
     },
-    
+    {
+      id: 22,
+      title: 'Mood Muse',
+      description: 'MoodMuse is a beautifully designed mental wellness tracker where users log their daily mood, thoughts, and reflections.',
+      longDescription:
+        'MoodMuse is a beautifully designed mental wellness tracker where users log their daily mood, thoughts, and reflections.',
+      image: MoodMuse,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://moodmuse-reflections-journal.vercel.app/',
+      featured: true,
+    },
   ];
 
   const filters = [
