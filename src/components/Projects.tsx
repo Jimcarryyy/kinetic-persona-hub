@@ -244,7 +244,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 19,
+      id: 20,
       title: 'Elevate',
       description: 'Join thousands of learners and creators on Elevate. Master new skills, build your expertise.',
       longDescription:
