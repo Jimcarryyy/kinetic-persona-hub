@@ -19,7 +19,6 @@ import Neuro from '../image/neuro.webp';
 import NeuroVerse from '../image/NeuroVerse.webp';
 import Orderuk from '../image/orderuk.webp';
 import Patient from '../image/patient.webp';
-import PixelDev from '../image/pixeldev.webp';
 import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
@@ -30,17 +29,6 @@ const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(6);
 
   const projects = [
-    {
-      id: 1,
-      title: 'Pizel Dev Code',
-      description: 'At Pixel DevCode, we specialize in creating Pixel Perfect Websites',
-      longDescription: 'At Pixel DevCode, we specialize in creating Pixel Perfect Websites that are not only visually stunning but also highly functional. Our team of expert designers and developers ensures every element on your website is meticulously crafted, down to the smallest detail, to provide a flawless user experience across all devices.',
-      image: PixelDev,
-      technologies: ['HTML', 'CSS', 'JS', 'PHP', 'MySql', 'Wordpress'],
-      category: 'fullstack',
-      live: 'https://pixeldevcode.com/',
-      featured: true,
-    },
     {
       id: 2,
       title: 'Around The World',
@@ -307,7 +295,7 @@ const Projects = () => {
       live: 'https://haven-hart-refine-web.vercel.app/',
       featured: true,
     },
-    
+
   ];
 
   const filters = [
