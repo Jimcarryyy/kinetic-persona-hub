@@ -18,6 +18,7 @@ import Movie from '../image/movie.webp';
 import Neuro from '../image/neuro.webp';
 import NeuroVerse from '../image/NeuroVerse.webp';
 import Orderuk from '../image/orderuk.webp';
+import Patent from '../image/patent.webp';
 import Patient from '../image/patient.webp';
 import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
@@ -58,7 +59,7 @@ const Projects = () => {
       description: 'A modular interface framework inspired by the precision and structure of patent documentation.',
       longDescription:
         'Patent System is a robust, enterprise-grade design system built to streamline the development of large-scale applications. It includes a library of reusable, accessible UI components, well-defined design tokens, and fully integrated documentation using Storybook. Designed with scalability and consistency in mind, it empowers teams to build cohesive user interfaces faster and more efficiently.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&h=600',
+      image: Patent,
       technologies: ['HTML', 'CSS', 'JS', 'PHP', 'MySQL', 'Wordpress'],
       category: 'fullstack',
       featured: false,
@@ -207,7 +208,7 @@ const Projects = () => {
       longDescription:
         'Premier legal representation combining decades of experience with innovative approaches to achieve exceptional outcomes for our clients.',
       image: Veritas,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://veritas-visual-justice.vercel.app/',
       featured: true,
@@ -219,7 +220,7 @@ const Projects = () => {
       longDescription:
         'Transform your productivity with AI-powered automation, intelligent scheduling, and seamless workflow optimization for modern teams.',
       image: Neuro,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://neuroflow-genesis-page.vercel.app/',
       featured: true,
@@ -231,7 +232,7 @@ const Projects = () => {
       longDescription:
         'Founded in 2020, ThriveStore began as a small team with a big vision: to create the most customer-centric e-commerce experience possible. We started by carefully curating products that we ourselves would love to own and use.',
       image: Thrive,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://thrive-online-store.vercel.app/',
       featured: true,
@@ -243,7 +244,7 @@ const Projects = () => {
       longDescription:
         'Join thousands of learners and creators on Elevate. Master new skills, build your expertise, and transform your career with our premium courses.',
       image: Elevate,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://elevate-learn-brightly.vercel.app/',
       featured: true,
@@ -255,7 +256,7 @@ const Projects = () => {
       longDescription:
         'Where AI ethics meets speculative fiction. Explore the intersection of technology, philosophy, and human potential through the lens of tomorrows visionaries.',
       image: NeuroVerse,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://neuro-verse-chronicles.vercel.app/',
       featured: true,
@@ -267,7 +268,7 @@ const Projects = () => {
       longDescription:
         'MoodMuse is a beautifully designed mental wellness tracker where users log their daily mood, thoughts, and reflections.',
       image: MoodMuse,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://moodmuse-reflections-journal.vercel.app/',
       featured: true,
@@ -279,7 +280,7 @@ const Projects = () => {
       longDescription:
         'Where innovation meets intention. We are building the next generation of digital experiences',
       image: JERN,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://jern-digital-vision.vercel.app/',
       featured: true,
@@ -291,7 +292,7 @@ const Projects = () => {
       longDescription:
         'We are more than advisors; we are architects of opportunity. Our mission is to provide unparalleled expertise in luxury real estate',
       image: HEAVEN,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://haven-hart-refine-web.vercel.app/',
       featured: true,
@@ -303,7 +304,7 @@ const Projects = () => {
       longDescription:
         'Founded on the belief that sustainability is not a trend but our responsibility, Verdantra guides organizations toward a future where profit and purpose align.',
       image: VERDANTRA,
-      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://verdantra-eco-advisory-web.vercel.app/',
       featured: true,
@@ -373,6 +374,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
