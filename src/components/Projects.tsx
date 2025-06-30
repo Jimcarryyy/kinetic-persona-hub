@@ -22,6 +22,7 @@ import Patient from '../image/patient.webp';
 import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
+import VERDANTRA from '../image/verdantra.webp';
 import Veritas from '../image/veritas.webp';
 
 const Projects = () => {
@@ -295,7 +296,18 @@ const Projects = () => {
       live: 'https://haven-hart-refine-web.vercel.app/',
       featured: true,
     },
-
+    {
+      id: 25,
+      title: 'Verdantra',
+      description: 'Founded on the belief that sustainability is not a trend but our responsibility, Verdantra guides organizations toward a future where profit and purpose align.',
+      longDescription:
+        'Founded on the belief that sustainability is not a trend but our responsibility, Verdantra guides organizations toward a future where profit and purpose align.',
+      image: VERDANTRA,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://verdantra-eco-advisory-web.vercel.app/',
+      featured: true,
+    },
   ];
 
   const filters = [
