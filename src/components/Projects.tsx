@@ -22,6 +22,7 @@ import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.webp';
+import JERN from '../image/jern.webp';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -281,6 +282,19 @@ const Projects = () => {
       live: 'https://moodmuse-reflections-journal.vercel.app/',
       featured: true,
     },
+    {
+      id: 23,
+      title: 'JERN',
+      description: 'Where innovation meets intention. We are building the next generation of digital experiences',
+      longDescription:
+        'Where innovation meets intention. We are building the next generation of digital experiences',
+      image: JERN,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://jern-digital-vision.vercel.app/',
+      featured: true,
+    },
+
   ];
 
   const filters = [
