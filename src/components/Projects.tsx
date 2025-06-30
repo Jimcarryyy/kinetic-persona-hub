@@ -93,7 +93,7 @@ const Projects = () => {
       longDescription:
         'At Premium Car Rentals, we provide a wide range of top-notch vehicles tailored to meet your unique travel needs. Whether it’s a family trip, business travel, or just a weekend getaway, our cars are well-maintained and affordable.',
       image: Carrental,
-      technologies: ['HTML', 'CSS', 'JS','JQEURY', 'AJAX', 'PHP', 'MySQL'],
+      technologies: ['HTML', 'CSS', 'JS', 'JQEURY', 'AJAX', 'PHP', 'MySQL'],
       category: 'fullstack',
       live: 'http://carreservesite.fast-page.org/?i=1',
       featured: true,
@@ -305,8 +305,8 @@ const Projects = () => {
     { id: 'desktop', label: 'Desktop' },
   ];
 
-  const filtered = activeFilter === 'all' 
-    ? projects 
+  const filtered = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   const filteredProjects = filtered.slice(0, visibleCount);
@@ -329,11 +329,10 @@ const Projects = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeFilter === filter.id
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeFilter === filter.id
                   ? 'bg-primary text-primary-foreground shadow-lg'
                   : 'glass-card hover:scale-105'
-              }`}
+                }`}
             >
               {filter.label}
             </button>
@@ -342,85 +341,94 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <div
-              key={project.id}
-              className="glass-card rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-500 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Project Image */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Overlay buttons */}
-                <div className="absolute top-4 right-4 space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glass-card p-2 rounded-full hover:scale-110 transition-transform duration-200"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
+          {filteredProjects
+            .sort((a, b) => {
+              if (activeFilter === 'All') {
+                if (a.featured && !b.featured) return -1;
+                if (!a.featured && b.featured) return 1;
+              }
+              return 0;
+            })
+            .map((project, index) => (
 
-                {project.featured && (
-                  <div className="absolute top-4 left-4">
-                    <div className="flex items-center space-x-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                      <Zap className="w-3 h-3" />
-                      <span>Featured</span>
-                    </div>
-                  </div>
-                )}
-              </div>
+              <div
+                key={project.id}
+                className="glass-card rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-500 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Project Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex space-x-3">
-                  {project.live ? (
+                  {/* Overlay buttons */}
+                  <div className="absolute top-4 right-4 space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 flex-1 justify-center"
+                      className="glass-card p-2 rounded-full hover:scale-110 transition-transform duration-200"
                     >
-                      <Eye className="w-4 h-4" />
-                      <span className="text-sm">Demo</span>
+                      <ExternalLink className="w-5 h-5" />
                     </a>
-                  ) : (
-                    <button
-                      disabled
-                      className="flex items-center space-x-2 px-4 py-2 bg-muted text-muted-foreground rounded-lg cursor-not-allowed flex-1 justify-center"
-                    >
-                      <Eye className="w-4 h-4 opacity-60" />
-                      <span className="text-sm">Demo Unavailable</span>
-                    </button>
+                  </div>
+
+                  {project.featured && (
+                    <div className="absolute top-4 left-4">
+                      <div className="flex items-center space-x-1 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                        <Zap className="w-3 h-3" />
+                        <span>Featured</span>
+                      </div>
+                    </div>
                   )}
                 </div>
+
+                {/* Project Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-primary">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex space-x-3">
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 flex-1 justify-center"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span className="text-sm">Demo</span>
+                      </a>
+                    ) : (
+                      <button
+                        disabled
+                        className="flex items-center space-x-2 px-4 py-2 bg-muted text-muted-foreground rounded-lg cursor-not-allowed flex-1 justify-center"
+                      >
+                        <Eye className="w-4 h-4 opacity-60" />
+                        <span className="text-sm">Demo Unavailable</span>
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
