@@ -8,7 +8,9 @@ import Cohen from '../image/cohen.webp';
 import Elevate from '../image/elevate.webp';
 import Gkggc from '../image/gkggc.webp';
 import GYM from '../image/gym.webp';
+import HEAVEN from '../image/HEAVEN.webp';
 import Hotel from '../image/hotel.webp';
+import JERN from '../image/jern.webp';
 import Line from '../image/line.webp';
 import LogSystem from '../image/logsystemimage.webp';
 import MoodMuse from '../image/MoodMuse.webp';
@@ -22,7 +24,6 @@ import Rights from '../image/rights.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.webp';
-import JERN from '../image/jern.webp';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -294,7 +295,19 @@ const Projects = () => {
       live: 'https://jern-digital-vision.vercel.app/',
       featured: true,
     },
-
+    {
+      id: 24,
+      title: 'HEAVEN & HART',
+      description: 'We are more than advisors; we are architects of opportunity. Our mission is to provide unparalleled expertise in luxury real estate',
+      longDescription:
+        'We are more than advisors; we are architects of opportunity. Our mission is to provide unparalleled expertise in luxury real estate',
+      image: HEAVEN,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite'],
+      category: 'frontend',
+      live: 'https://haven-hart-refine-web.vercel.app/',
+      featured: true,
+    },
+    
   ];
 
   const filters = [
