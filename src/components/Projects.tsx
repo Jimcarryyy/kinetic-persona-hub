@@ -309,6 +309,18 @@ const Projects = () => {
       live: 'https://healing-touch-design.vercel.app/',
       featured: true,
     },
+    // {
+    //   id: 26,
+    //   title: 'The Metal Shop',
+    //   description: 'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
+    //   longDescription:
+    //     'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
+    //   image: Metalshop,
+    //   technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
+    //   category: 'frontend',
+    //   live: 'https://metal-shop-forge-site.vercel.app/',
+    //   featured: true,
+    // },
   ];
 
   const filters = [
