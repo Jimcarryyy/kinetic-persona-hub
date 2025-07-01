@@ -21,6 +21,7 @@ import Orderuk from '../image/orderuk.webp';
 import Patent from '../image/patent.webp';
 import Patient from '../image/patient.webp';
 import Rights from '../image/rights.webp';
+import SERENITY from '../image/serenity.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.webp';
@@ -294,6 +295,18 @@ const Projects = () => {
       technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://haven-hart-refine-web.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 25,
+      title: 'Serenity Health',
+      description: 'At Serenity Health Systems, we combine cutting-edge medical expertise with personalized care to ensure your health and well-being are our top priority.',
+      longDescription:
+        'At Serenity Health Systems, we combine cutting-edge medical expertise with personalized care to ensure your health and well-being are our top priority.',
+      image: SERENITY,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
+      category: 'frontend',
+      live: 'https://healing-touch-design.vercel.app/',
       featured: true,
     },
   ];
