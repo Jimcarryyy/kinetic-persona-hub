@@ -25,6 +25,8 @@ import SERENITY from '../image/serenity.webp';
 import Spt from '../image/spt.webp';
 import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.webp';
+import MetalShop from '../image/metalshop.webp';
+import HaloRing from '../image/halo-ring.webp';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -309,18 +311,30 @@ const Projects = () => {
       live: 'https://healing-touch-design.vercel.app/',
       featured: true,
     },
-    // {
-    //   id: 26,
-    //   title: 'The Metal Shop',
-    //   description: 'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
-    //   longDescription:
-    //     'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
-    //   image: Metalshop,
-    //   technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
-    //   category: 'frontend',
-    //   live: 'https://metal-shop-forge-site.vercel.app/',
-    //   featured: true,
-    // },
+    {
+      id: 26,
+      title: 'The Metal Shop',
+      description: 'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
+      longDescription:
+        'Professional metal roofing solutions, custom panel fabrication, and expert installation services. Quality craftsmanship backed by decades of experience.',
+      image: MetalShop,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
+      category: 'frontend',
+      live: 'https://metal-shop-forge-site.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 27,
+      title: 'Grace Rings',
+      description: 'Custom engagement rings crafted with lab-grown diamonds and premium metals. Every piece tells your unique love story.',
+      longDescription:
+        'Custom engagement rings crafted with lab-grown diamonds and premium metals. Every piece tells your unique love story.',
+      image: HaloRing,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
+      category: 'frontend',
+      live: 'https://brilliant-custom-build.vercel.app/',
+      featured: true,
+    },
   ];
 
   const filters = [
