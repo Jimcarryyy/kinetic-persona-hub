@@ -27,6 +27,7 @@ import Thrive from '../image/thrive.webp';
 import Veritas from '../image/veritas.webp';
 import MetalShop from '../image/metalshop.webp';
 import HaloRing from '../image/halo-ring.webp';
+import TTF from '../image/ttf.webp';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -333,6 +334,18 @@ const Projects = () => {
       technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
       category: 'frontend',
       live: 'https://brilliant-custom-build.vercel.app/',
+      featured: true,
+    },
+    {
+      id: 28,
+      title: 'The Translational Futures',
+      description: 'The Translational Futures Foundation bridges cutting-edge neuroscience research with compassionate care',
+      longDescription:
+        'The Translational Futures Foundation bridges cutting-edge neuroscience research with compassionate care',
+      image: TTF,
+      technologies: ['HTML', 'Tailwind css', 'JS', 'React + Vite', 'Typescript'],
+      category: 'frontend',
+      live: 'https://ttf-repo.vercel.app/',
       featured: true,
     },
   ];
