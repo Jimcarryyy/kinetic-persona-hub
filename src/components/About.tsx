@@ -3,7 +3,7 @@ import { User, Award, Coffee, Heart } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: User, label: 'Years Experience', value: '3+' },
+    { icon: User, label: 'Years Experience', value: '4+' },
     { icon: Award, label: 'Projects Completed', value: '20+' },
     { icon: Coffee, label: 'Cups of Coffee', value: '1000+' },
     { icon: Heart, label: 'Happy Clients', value: '10+' },
@@ -15,7 +15,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover my journey, passion, and the driving force behind my creative work
+            From hands-on builds to production automations—here&apos;s how I work and what I care about
           </p>
         </div>
 
@@ -26,19 +26,26 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-6 text-primary">My Story</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hi there! I'm Jimcarry, a passionate full-stack developer with over 3 years of experience 
-                  creating digital solutions that make a difference. My journey began with a curiosity 
-                  about how things work, which led me to the fascinating world of web development.
+                  Hi there! I&apos;m Jimcarry—a full-stack developer with 4+ years of professional experience shipping
+                  web products and the messy, real-world systems behind them. I still love a clean UI, but lately my
+                  deepest work has been in workflow automation and integrations: Make, n8n, Zapier, Task Magic (RPA),
+                  and the APIs that keep data moving where it needs to go.
                 </p>
                 <p>
-                  I specialize in modern web technologies and have a keen eye for design. My approach 
-                  combines technical expertise with creative problem-solving to deliver exceptional 
-                  user experiences that not only look great but perform flawlessly.
+                  My most recent role was a confidential remote engagement with an Australian client. I owned a
+                  Facebook Marketplace automation effort end to end—designing, hardening, and shipping it to
+                  production on my own—while keeping their company site healthy with new features, steady upgrades,
+                  and production bug fixes when things got busy.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to 
-                  open-source projects, or enjoying a good cup of coffee while sketching out ideas 
-                  for my next project.
+                  I use AI-assisted workflows in my day-to-day the same way I&apos;d use any other tool: to speed up
+                  research, implementation drafts, and quality checks. The accountability is still mine—I review,
+                  test, and stand behind what ships.
+                </p>
+                <p>
+                  When I step away from client work, I&apos;m usually poking at new tech, tinkering on side projects,
+                  or refilling the coffee mug. If that sounds like your kind of collaborator, I&apos;d love to hear
+                  what you&apos;re building.
                 </p>
               </div>
             </div>

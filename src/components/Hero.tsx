@@ -1,35 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 const Hero = () => {
-  const [currentText, setCurrentText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const texts = ['Full Stack Developer', 'Software Developer', 'Problem Solver', 'Creative Thinker'];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const text = texts[currentIndex];
-    let index = 0;
-    setCurrentText('');
-
-    const typing = setInterval(() => {
-      setCurrentText(text.slice(0, index));
-      index++;
-      if (index > text.length) {
-        clearInterval(typing);
-      }
-    }, 100);
-
-    return () => clearInterval(typing);
-  }, [currentIndex]);
-
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -54,15 +25,14 @@ const Hero = () => {
             <span className="block gradient-text mt-2 leading-snug">Jim Carry</span>
           </h1>
 
-          <div className="text-sm sm:text-xl lg:text-2xl text-muted-foreground mb-6 h-10 flex items-center justify-center px-2 max-w-full whitespace-nowrap overflow-hidden text-ellipsis">
-            <span className="border-r-2 border-primary pr-2 animate-pulse">
-              {currentText}
-            </span>
-          </div>
+          <p className="text-sm sm:text-xl lg:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto leading-snug">
+            Full-stack developer · Workflow automation & integrations
+          </p>
 
-          <p className="text-sm sm:text-lg text-muted-foreground mb-10 max-w-xl mx-auto leading-relaxed">
-            Passionate about creating exceptional digital experiences through innovative design
-            and cutting-edge technology. Let's build something amazing together.
+          <p className="text-sm sm:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+            I build reliable web products and production-grade automations—Make, n8n, Zapier, RPA, and the APIs
+            that stitch it all together—along with the sites those systems connect to. I like clear ownership, fast
+            iteration, and shipping work that keeps running once it&apos;s live.
           </p>
 
           {/* CTA Buttons */}

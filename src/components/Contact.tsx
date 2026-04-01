@@ -68,7 +68,9 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
           <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your next project? Let's create something amazing together.
+            I&apos;m open to remote roles and contracts where I can own automations and integrations—and still jump in
+            on full-stack web when that&apos;s what the project needs. Tell me what you&apos;re trying to solve and
+            what &quot;done&quot; looks like for you; I&apos;ll tell you honestly if I&apos;m a good fit.
           </p>
         </div>
 

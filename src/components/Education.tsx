@@ -56,13 +56,27 @@ const Education = () => {
       achievements: ['System Architecture', 'CI/CD Pipelines', 'Managing Multiple Sites', 'One-Man Army'],
       icon: CodeXml,
     },
+    {
+      degree: 'Confidential Client (Australia)',
+      institution: 'Full-stack Developer',
+      year: 'Aug 2025–Mar 2026',
+      description:
+        'Served as a full-stack developer on a confidential remote engagement, with a strong focus on workflow automation and integrations across Make, n8n, Zapier, and Task Magic (RPA). Owned end-to-end delivery of a Facebook Marketplace automation initiative—building, hardening, and shipping it to production independently—while supporting the company website with feature upgrades, iterative improvements, and production bug fixes in a fast-moving environment.',
+      achievements: [
+        'Make & n8n',
+        'Zapier & Task Magic (RPA)',
+        'Owner-Led Automation Delivery',
+        'Full-Stack Product Support',
+      ],
+      icon: CodeXml,
+    },
   ];
 
   const certifications = [
-    'Frontend Specialist',
-    'Java Expert',
-    'React Advanced Certification',
-    'One-Man Army',
+    'Production-grade automation ownership (end to end)',
+    'Solo Facebook Marketplace automation shipped to production',
+    'NDA-ready confidential client delivery (remote, Australia)',
+    'Full-stack product support: features, upgrades, live bug fixes',
   ];
 
   return (
@@ -72,7 +86,7 @@ const Education = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">Education and Experience</h2>
           <p className="text-sm sm:text-base lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            My academic journey and continuous learning path
+            From classroom foundations to production web apps, automations, and confidential client delivery.
           </p>
         </div>
 

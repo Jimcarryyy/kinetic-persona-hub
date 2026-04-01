@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Code, Palette, Database, Cloud, Smartphone, Zap } from 'lucide-react';
+import { Code, Palette, Database, Cloud } from 'lucide-react';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
@@ -19,7 +19,6 @@ const Skills = () => {
         { name: 'Tailwind CSS', level: 92, color: 'from-cyan-500 to-teal-500' },
         { name: 'Bootstrap CSS', level: 92, color: 'from-cyan-500 to-teal-700' },
         { name: 'Next.js', level: 50, color: 'from-gray-800 to-gray-600' },
-        { name: 'Nuxt.js', level: 55, color: 'from-lime-500 to-green-400' },
         { name: 'SASS/SCSS', level: 70, color: 'from-pink-500 to-red-400' },
         { name: 'TypeScript', level: 60, color: 'from-blue-600 to-blue-400' },
       ]
@@ -30,8 +29,6 @@ const Skills = () => {
       skills: [
         { name: 'PHP', level: 75, color: 'from-indigo-600 to-purple-400' },
         { name: 'Java', level: 80, color: 'from-red-600 to-orange-400' },
-        { name: 'C++', level: 40, color: 'from-gray-700 to-gray-500' },
-        { name: 'Python', level: 35, color: 'from-yellow-500 to-amber-400' },
         { name: 'Node.js', level: 60, color: 'from-green-700 to-lime-400' },
         { name: 'MySQL', level: 90, color: 'from-teal-500 to-blue-500' },
       ]
@@ -40,6 +37,10 @@ const Skills = () => {
       icon: Cloud,
       title: 'Tools & DevOps',
       skills: [
+        { name: 'Make', level: 88, color: 'from-purple-600 to-violet-500' },
+        { name: 'n8n', level: 85, color: 'from-indigo-600 to-purple-500' },
+        { name: 'Zapier', level: 85, color: 'from-orange-500 to-amber-500' },
+        { name: 'Task Magic (RPA)', level: 82, color: 'from-fuchsia-600 to-pink-500' },
         { name: 'WordPress/CMS', level: 75, color: 'from-blue-700 to-indigo-500' },
         { name: 'Git', level: 70, color: 'from-orange-600 to-red-600' },
         { name: 'GitHub', level: 80, color: 'from-gray-800 to-gray-500' },
@@ -47,7 +48,6 @@ const Skills = () => {
         { name: 'CI/CD Pipelines', level: 100, color: 'from-green-600 to-emerald-600' },
         { name: 'CMD', level: 70, color: 'from-gray-700 to-gray-400' },
         { name: 'SSH Configs', level: 90, color: 'from-slate-700 to-slate-400' },
-        { name: 'RPA', level: 50, color: 'from-purple-600 to-indigo-400' },
       ]
     },
     design: {
@@ -69,7 +69,8 @@ const Skills = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 gradient-text">Skills & Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive technical skills across the full development stack
+            Full-stack web development with a strong recent focus on automation, integrations, and dependable
+            production workflows.
           </p>
         </div>
 
@@ -134,9 +135,10 @@ const Skills = () => {
           <h3 className="text-2xl font-semibold mb-6 text-primary">Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              'HTML', 'CSS', 'JavaScript', 'jQuery', 'React.js', 'Vue.js', 'Next.js', 'Nuxt.js', 'SASS/SCSS',
-              'TypeScript', 'PHP', 'Java', 'C++', 'Python', 'Node.js', 'MySQL',
-              'WordPress/CMS', 'Git', 'GitHub', 'Docker', 'CI/CD Pipelines', 'CMD', 'SSH Configs', 'RPA','Figma'
+              'HTML', 'CSS', 'JavaScript', 'jQuery', 'React.js', 'Vue.js', 'Next.js', 'SASS/SCSS',
+              'TypeScript', 'PHP', 'Java', 'Node.js', 'MySQL',
+              'Make', 'n8n', 'Zapier', 'Task Magic (RPA)',
+              'WordPress/CMS', 'Git', 'GitHub', 'Docker', 'CI/CD Pipelines', 'CMD', 'SSH Configs', 'Figma',
             ].map((tech, index) => (
               <span
                 key={tech}
